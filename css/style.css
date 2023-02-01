@@ -27,6 +27,7 @@ body {
   background-color: #FFF8EE;
   color: #F85959;
   display: flex;
+ 
 }
 
 img,
@@ -89,6 +90,7 @@ iframe {
   margin: 0 auto;
   max-width: max-content;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .header__title {
@@ -252,4 +254,56 @@ iframe {
 
 .count_text {
   font-size: 18px;
+}
+
+.description {
+position:absolute;
+left: -60%;
+top: 40px;
+background:rgba(255,255,255, 0.95);
+width: 400px;
+display:none;
+
+}
+
+.description__title{
+  margin-top: 10px;
+}
+
+.description__elem{
+margin-top: 5px;
+}
+
+.header:hover .description{
+  display: block;
+  animation: fadeInFromNone 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutFromBlock {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

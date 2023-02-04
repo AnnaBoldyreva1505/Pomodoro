@@ -41,7 +41,7 @@ if (!todoList.length) {
 }
 
   const todoItem = todoList.find((item) => item.id === todo.id);
-  // todoItem.title = todo.title;
+  todoItem.title = todo.title;
   todoItem.pomodoro = todo.pomodoro;
   localStorage.setItem("pomodoro", JSON.stringify(todoList));
 };

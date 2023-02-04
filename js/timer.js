@@ -39,6 +39,7 @@ state.timeLeft = Math.floor((countDown - now) / 1000)
     }
 
     document.title = title;
+    clearTimeout(state.timerId)
 
     if (state.status === "work") {
       state.activeTodo.pomodoro += 1;
